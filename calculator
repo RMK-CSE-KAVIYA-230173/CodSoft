@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Basic Calculator</title>
+  <style>
+     .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin: 50px auto;
+    max-width: 300px;
+    background-color: #2b4c8d;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(180, 158, 158, 0.1);
+    padding: 20px;
+  }
+  
+  .display {
+    grid-column: span 4;
+    background-color: #f4f5f6;
+    border: 1px solid #111010;
+    border-radius: 5px;
+    text-align: right;
+    padding: 10px;
+    font-size: 24px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #cda9dd;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #c86d7f;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="appendDigit('7')">7</button>
+    <button onclick="appendDigit('8')">8</button>
+    <button onclick="appendDigit('9')">9</button>
+    <button onclick="setOperator('+')">+</button>
+    <button onclick="appendDigit('4')">4</button>
+    <button onclick="appendDigit('5')">5</button>
+    <button onclick="appendDigit('6')">6</button>
+    <button onclick="setOperator('-')">-</button>
+    <button onclick="appendDigit('1')">1</button>
+    <button onclick="appendDigit('2')">2</button>
+    <button onclick="appendDigit('3')">3</button>
+    <button onclick="setOperator('*')">*</button>
+    <button onclick="setOperator('/')">/</button>
+    <button onclick="appendDigit('0')">0</button>
+    <button onclick="calculate()">=</button>
+  </div>
+
+  <script>
+  let displayValue = '0';
+let operator = '';
+let prevValue = '';
+
+function updateDisplay() {
+  document.getElementById('display').textContent = displayValue;
+}
+
+function appendDigit(digit) {
+  if (displayValue === '0') {
+       displayValue = digit;
+ } else {
+    displayValue += digit;
+  }
+  updateDisplay();
+}
+
+function setOperator(op) {
+  operator = op;
+  prevValue = displayValue;
+  displayValue = '0';
+  updateDisplay();
+}
+
+function calculate() {
+  let result;
+  const currentValue = parseFloat(displayValue);
+  const previousValue = parseFloat(prevValue);
+  switch (operator) {
+    case '+':
+      result = previousValue + currentValue;
+      break;
+    case '-':
+      result = previousValue - currentValue;
+      break;
+    case '*':
+      result = previousValue * currentValue;
+      break;
+    case '/':
+      result = previousValue / currentValue;
+      break;
+    default:
+      result = currentValue;
+  }
+  displayValue = result.toString();
+  updateDisplay();
+}
+
+function clearDisplay() {
+  displayValue = '0';
+  operator = '';
+  prevValue = '';
+  updateDisplay();
+}
+
+updateDisplay();
+</script>
+</body>
+</html>
+
+
+
