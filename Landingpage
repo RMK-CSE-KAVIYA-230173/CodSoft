@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracelet Collection</title>
+    <style>
+          {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: glow 2s ease-in-out infinite alternate; 
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de, 0 0 200px #ff00de;
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+#bracelets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bracelet {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.bracelet img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6; 
+}
+
+span.price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+#about {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+#details {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    max-height: 150px; 
+}
+
+nav {
+    flex: 1; 
+    text-align: right; 
+}
+#offer-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.offer-left, .offer-right {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.offer-left h2, .offer-right h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.offer-left p, .offer-right p {
+    color: #666;
+    font-size: 16px;
+}
+#bracelets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.bracelet-left {
+    flex-basis: calc(50% - 10px); 
+    margin-bottom: 20px;
+}
+#detail {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.payment {
+    flex-basis: calc(50% - 10px); 
+    margin-bottom: 20px;
+}
+
+.certificate {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.bracelet-right {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+.view-more {
+    text-align: center;
+    margin-bottom: 40px; 
+
+.view-more a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.view-more a:hover {
+    background-color: #555; 
+}
+</style>
+</head>
+<body>
+    <header>
+        
+        <div class="header-content">
+            <div class="logo">
+                
+                
+                        <img src="https://img.freepik.com/premium-vector/bracelet-icontrendy-bracelet-logo-concept-white-background-from-luxury-collection_306040-3018.jpg" alt="Bracelet Collection Logo" width="100" height=""100>
+                    </div>
+            </div>
+            <h1>HAWKS SHINE</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+<section id ="detail">
+<div><img src = "C:\Users\Jai\OneDrive\codsoft project\landpage\certificate.jpg" width = "70%" height="40%"div>
+</section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Bracelet Collection! We are passionate about crafting exquisite bracelets that reflect elegance and style. Our journey began with a vision to create unique pieces that add a touch of sophistication to every outfit. Each bracelet in our collection is meticulously handcrafted by skilled artisans using the finest materials, ensuring exceptional quality and attention to detail. Whether you're looking for a statement piece for a special occasion or a versatile accessory for everyday wear, our diverse collection offers something for every taste and preference. At Bracelet Collection, we believe that jewelry is not just an accessory, but a reflection of one's personality and individuality. Explore our collection and discover the perfect bracelet to complement your unique style.</p>
+        </section>
+        <section id="offer-details">
+            <div class="offer-left">
+                <h2>Special Offer!</h2>
+                <p>Get 20% off on all bracelets for a limited time only. Hurry up!</p>
+            </div>
+            <div class="offer-right">
+                <h2>Our Specialty</h2>
+                <p>Our collection features handcrafted bracelets made from ethically sourced materials, ensuring both quality and sustainability.</p>
+            </div>
+        </section>
+        <section id="bracelets">
+            <div class="bracelet-left">
+                <img src="https://i5.walmartimages.com/asr/faaf9cac-df1b-4894-a97c-27e0a3ebd2f4_1.61acdd130f015c7756bac818e661bcb6.jpeg" alt="Bracelet 1" width="200" height="200">
+                <h2>Crystal Bead Bracelet</h2>
+                <p>Handcrafted crystal bead bracelet with elegant design.</p>
+                <span class="price">$29.99</span>
+                
+            </div>
+            
+                <div class="bracelet-right">
+                <img src="https://spy.com/wp-content/uploads/2021/03/dfv.jpg" alt="Bracelet 2" width="200" height="200">
+                <h2>Leather Cuff Bracelet</h2>
+                <p>Genuine leather cuff bracelet for a rugged yet stylish look.</p>
+                <span class="price">$39.99</span>
+            </div>
+            
+            <div class="bracelet-left">
+                <img src="http://www.styleskier.com/wp-content/uploads/2017/08/rose-gold-charm-bracelet-rose-gold-flower-charm-bracelet-fkcufpt-.jpg" alt="Bracelet 3" width="200" height="200">
+                <h2>Rose Gold Charm Bracelet</h2>
+                <p>Chic rose gold charm bracelet to elevate your style.</p>
+                <span class="price">$49.99</span>
+            </div>
+            <div class="bracelet-right">
+                <img src=" https://i.pinimg.com/originals/0e/cb/50/0ecb50d0edcba893be18dd0d95e049a7.png" alt="Bracelet 4" width="200" height="200">
+                <h2>Minimalist Bangle</h2>
+                <p>Simple yet sophisticated minimalist bangle bracelet.</p>
+                <span class="price">$19.99</span>
+            </div>
+            <div class="bracelet-left">
+                <img src="https://img1.etsystatic.com/115/0/9580474/il_fullxfull.1043954429_p7d3.jpg" alt="Bracelet 5" width="200" height="200">
+                <h2>Bohemian Wrap Bracelet</h2>
+                <p>Boho-inspired wrap bracelet with vibrant colors.</p>
+                <span class="price">$34.99</span>
+            </div>
+            <div class="bracelet-right">
+                <img src="https://i.etsystatic.com/9986767/r/il/604715/2602728472/il_fullxfull.2602728472_hhqn.jpg" alt="Bracelet 6" width="200" height="200">
+                <h2>Chain Link Bracelet</h2>
+                <p>Classic chain link bracelet for everyday wear.</p>
+                <span class="price">$24.99</span>
+            </div>
+            <div class="view-more">
+                <a href="#view-more">View More</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@braceletcollection.com</p>
+                <p>Phone: 1-800-123-4567</p>
+                <p>Address: 123 Bracelet Ave, City, Country</p>
+            </div>
+        </div>
+        <p>&copy; 2024 Bracelet Collection. All rights reserved.</p>
+    </footer>
+</body>
+</html>
